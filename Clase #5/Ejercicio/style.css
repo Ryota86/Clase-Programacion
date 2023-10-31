@@ -1,0 +1,35 @@
+.nav_bar_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: antiquewhite;
+    align-items: center;
+    height: 70px;
+}
+
+.nav_bar_image {
+    height: 60px;
+    width: auto;
+}
+
+
+
+input {
+    height: 20px;
+}
+
+.information {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.information a:hover {
+    color: #007BFF;
+}
+

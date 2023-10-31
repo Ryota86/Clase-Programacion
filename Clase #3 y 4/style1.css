@@ -1,0 +1,21 @@
+.mi-caja {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    width: 300px; 
+    height: 200px; 
+    background-color: #f5f5f5; 
+    border: 2px solid hsl(0, 0%, 20%); /* Borde de la caja */
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 50px 50px; 
+    text-align: center; 
+    font-size: 20px; 
+    
+}
+
+.mi-caja.offer {
+    background-color: #ffe0b2; 
+    border-color: #ff9800; 
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.6); 
+}
