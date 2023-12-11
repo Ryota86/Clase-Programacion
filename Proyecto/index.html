@@ -1,83 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>E-COMMERCE</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetFlight</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">                             
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="/Imagenes/StreetFlight.png" alt="Logo">
+          </a>
+        </div>
+        <nav class="nav-bar">
+          <ul class="nav-links">
+            <li><a href="/Subpaginas/drops.html">Drops</a></li>
+            <li><a href="#destacados">Destacado</a></li>
+            <!-- Menú desplegable para categorías -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categorías
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Nuevos Lanzamientos</a>
+                <a class="dropdown-item" href="#">Descuentos</a>
+                <a class="dropdown-item" href="#">Todo</a>
+                <!-- Agregar más enlaces de categorías según sea necesario -->
+              </div>
+            </li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="user-options">
+          <a href="Subpaginas/login.html" class="icon">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="Subpaginas/shopping-cart.html" class="icon">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+    </header>
 
-        <header class="header">
-            <div class="logo">
-                <img src="Rockport Garage.png" alt="logo">
+
+    <!-- Banner Principal -->
+    <section id="banner" class="banner">
+        <!-- Implementar carrusel de Bootstrap o similar aquí -->
+        <div id="sneakerCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#sneakerCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#sneakerCarousel" data-slide-to="1"></li>
+              <li data-target="#sneakerCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#"> <!-- Añade el enlace al producto aquí -->
+                      <img src="https://res.cloudinary.com/brokenchains/image/upload/v1699397075/BC%20-%20SESION%206-60.jpg" class="d-block w-100" alt="Product Name">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h3>Air Jordan 1 low 85 <br> [Natural Grey]</h3>
+                      </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="https://res.cloudinary.com/brokenchains/image/upload/v1692365586/banner-yeezy-slide-slate-grey-01.jpg" class="d-block w-100" alt="Sneaker 1">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="https://www.kicks.com.co/media/wysiwyg/01_dunk_banner_desktop-min_1.jpeg" class="d-block w-100" alt="Sneaker 3">
+                    </a>
+                </div>
             </div>
-
-            
-
-            </div>
-
-            <div class="nav-bar">
-                <nav>
-                    <form action="/buscar" method="get">
-                        <input type="search" name="q" placeholder="Buscar...">
-                        <button type="submit">
-                            <i>&#128269;</i>
-                        </button> 
-                    </form>
-                </nav>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Catalogo</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-            <a href="https://www.twitch.tv/pelicanger" class="btn">
-                <button>
-                    <img src="https://cdn-icons-png.flaticon.com/128/4305/4305700.png" alt="carro de compras">
-                </button>
+            <a class="carousel-control-prev" href="#sneakerCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
             </a>
-        </header>
-        <body class="body">
-            <div class="body-container">
-                <div class="banner-principal">
-                    <div class="texto-banner">
-                        <h4>Pasion Por Los Autos</h4>
-                        <p>Vitrina de vehículos de gama alta, los mejores vehículos encuéntralos todos en un mismo lugar</p>
-                        <br>    
-                        <button>Ver Catalogo</button>
+            <a class="carousel-control-next" href="#sneakerCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+          
+    </section>
+
+    <!-- Secciones Destacadas -->
+    <section id="destacados">
+
+        <!-- Sección de Nuevos Lanzamientos -->
+        <div class="nuevos-lanzamientos">
+            <h2 class="section-title">Nuevos Lanzamientos</h2>
+            <div class="ver-todo-link">
+                <a href="#" class="ver-todo">Ver Todo</a>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!-- Tarjeta de producto 1 -->
+                    <div class="col-md-3">
+                        <a href="#">
+                            <div class="card">
+                                <img src="https://res.cloudinary.com/brokenchains/image/upload/v1697833539/FN0346-901-j-balvin-x-air-jordan-3-medellin-sunset-ps-lateral-derecho-09.png" class="card-img-top" alt="Producto 1">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Jordan 3 Retro x JBalvin 'Medellín Sunset' </h5>
+                                    <p class="card-text">$1.200.000</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-
-                <div class="quienes-somos">
-                    <div class="text-section">
-                        <h4>¿Quienes Somos?</h4>
-                        <p>Bienvenido a Rockport Garage
-                            <br><br>
-                            Este es tu destino final para vehículos que no solo se conducen, sino que se sienten. En Rockport, seleccionamos coches de gama alta que destacan tanto en rendimiento como en carácter. Somos entusiastas del motor comprometidos con la calidad y la pasión por la excelencia en cada curva del camino.
-                            <br><br>
-                            Aquí, cada coche es una promesa de aventuras palpitantes y un estilo inconfundible. Únete a la familia Rockport y descubre tu próximo compañero de viaje, donde el rendimiento se encuentra con la personalidad y la carretera se convierte en tu lienzo.
-                            <br><br>
-                            Rockport Garage: Donde los caminos se hacen legendarios.</p>
+                    <!-- Tarjeta de producto 2 -->
+                    <div class="col-md-3">
+                        <a href="#">
+                            <div class="card">
+                                <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/83e2954a-26e4-49ff-9c8d-271d6ba871ce/air-jordan-4-craft-olive-fb9927-200-release-date.jpg" class="card-img-top" alt="Producto 1">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Air Jordan 4 Craft "Olive" </h5>
+                                    <p class="card-text">$1.150.000</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-
-                    <div class="img-section">
-                        <img src="exposicion.png" alt="imagen quienes somos">
+                    <!-- Tarjeta de producto 3 -->
+                    <div class="col-md-3">
+                        <a href="#">
+                            <div class="card">
+                                <img src="https://res.cloudinary.com/brokenchains/image/upload/v1692313470/ID2350-adidas-yeezy-slide-slate-grey-lateral-derecho-01.png" class="card-img-top" alt="Producto 1">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Adidas Yeezy Slide 'Slate Grey' </h5>
+                                    <p class="card-text">$300.000</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-
-                <div class="catalogo">
-                </div>
-
-                <div class="accion-final">
+                    <!-- Tarjeta de producto 4 -->
+                    <div class="col-md-3">
+                        <a href="#">
+                            <div class="card">
+                                <img src="https://res.cloudinary.com/brokenchains/image/upload/v1698187731/FB9933-100-air-jordan-1-low-85-lateral-derecho-01.png" class="card-img-top" alt="Producto 1">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Air Jordan 1 Low 85 'Neutral Grey' </h5>
+                                    <p class="card-text">$1.000.000</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </body>
+            
+        </div>
+
+        <!-- Drop -->
+        <div class="drops">
+            <h2 class="section-title">Drops</h2>
+            <div class="ver-todo-link">
+                <a href="#" class="ver-todo">Ver Todo</a>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!-- Tarjeta de producto 1 -->
+                    <div class="col-md-3">
+                        <a href="#">
+                            <div class="card">
+                                <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/24fa00bd-cc0e-45c9-8de5-07888940913a/air-jordan-3-x-doernbecher-freestyle-hugo-fz3030-919-release-date.jpg" class="card-img-top" alt="Producto 1">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Air Jordan 3 x Doernbecher Freestyle "Hugo" </h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Tarjeta de producto 2 -->
+                    <div class="col-md-3">
+                        <a href="#">
+                            <div class="card">
+                                <img src="https://media.revistagq.com/photos/6516845c5a2d570f176eff56/master/w_1600%2Cc_limit/a-ma-maniere-air-jordan-5.jpg" class="card-img-top" alt="Producto 1">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Air Jordan 5 x A Ma Maniére </h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Tarjeta de producto 3 -->
+                    <div class="col-md-3">
+                        <a href="#">
+                            <div class="card">
+                                <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/6c2b1dc1-7614-4d1c-89d6-ab0bf6422a7f/air-jordan-1-high-og-royal-reimagined-dz5485-042-release-date.jpg" class="card-img-top" alt="Producto 1">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Air Jordan 1 High OG "Royal Reimagined" </h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div> 
+        </div>
+
+        <!-- Descuentos -->
+        <div class="descuentos">
+            <h2 class="section-title">Descuentos</h2>
+            <div class="ver-todo-link">
+                <a href="#" class="ver-todo">Ver Todo</a>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!-- Tarjeta de producto 1 -->
+                    <div class="col-md-3 mb-3">
+                        <a href="#">
+                            <div class="card h-100">
+                                <img src="https://www.kicks.com.co/media/catalog/product/d/q/dq7681-001-phsrh000-2000.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700&format=jpeg" class="card-img-top" alt="Producto 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nike Dunk Low Swoosh Shadow</h5>
+                                    <p class="card-text">
+                                        <span class="price-discount">$680.900,00</span><br>
+                                        <span class="price-original">$850.950,00</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Tarjeta de producto 2 -->
+                    <div class="col-md-3 mb-3">
+                        <a href="#">
+                            <div class="card h-100">
+                                <img src="https://www.kicks.com.co/media/catalog/product/d/d/dd1503-101-phsrh000-2000.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700&format=jpeg" class="card-img-top" alt="Producto 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nike Dunk Low Panda</h5>
+                                    <p class="card-text">
+                                        <span class="price-discount">$740.950,00</span><br>
+                                        <span class="price-original">$830.950,00</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Tarjeta de producto 3 -->
+                    <div class="col-md-3 mb-3">
+                        <a href="#">
+                            <div class="card h-100">
+                                <img src="https://res.cloudinary.com/brokenchains/image/upload/v1681854476/FD0776-100-NIKE-DUNK-HIGH-BC-01.jpg" class="card-img-top" alt="Producto 3">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Nike Dunk High 'San Francisco Chinatown' </h5>
+                                    <p class="card-text">
+                                        <span class="price-discount">$900.900,00</span><br>
+                                        <span class="price-original">$1.000.000</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Tarjeta de producto 4 -->
+                    <div class="col-md-3 mb-3">
+                        <a href="">
+                            <div class="card h-100">
+                                <img src="https://res.cloudinary.com/brokenchains/image/upload/v1684026764/AQ9129-103-AIR-JORDAN-4-BC-01.jpg" class="card-img-top" alt="Producto 4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Air Jordan 4 Retro 'Seafoam'</h5>
+                                    <p class="card-text">
+                                        <span class="price-discount">$1.400.000</span><br>
+                                        <span class="price-original">$1.600.000</span>
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
 
 
+
+
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros" id="faqs">
+        <!-- Sobre Nosotros -->
+        <section class="sobre-nosotros">
+            <div class="img-section">
+                <!-- Asumiendo que ya tienes una imagen lista para usar -->
+                <img src="https://media.voguebusiness.com/photos/60140c4680e198421a9ec8d1/master/pass/sneakers-sustainability-voguebus-janine-abrenilla-jan-21-promo.jpg" alt="Imagen representativa de Quiénes Somos">
+            </div>
+            <div class="text-section">
+                <!-- Sobre Nosotros -->
+                <h2>¿Quiénes Somos?</h2>
+                <p>Bienvenido a StreetFlight, un lugar donde la pasión por la moda urbana y la cultura callejera se unen. Aquí encontrarás desde las últimas tendencias en zapatillas hasta accesorios que definen tu estilo. Somos más que una tienda, somos una comunidad donde cada pieza cuenta una historia y cada compra es un paso hacia la autoexpresión.</p>
+                <!-- FAQs -->
+                <section id="faqs" class="faqs-section">
+                    <h2>Preguntas Frecuentes</h2>
+                    <div class="faq-item">
+                        <h3>¿Cómo seleccionan los productos que venden?</h3>
+                        <p>Nuestro equipo está siempre en movimiento, explorando las últimas tendencias urbanas para traerte la moda que marca la pauta en las calles. Cada pieza es seleccionada por su calidad, su estilo y su capacidad para mantenerte un paso adelante en la escena.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Realizan envíos internacionales?</h3>
+                        <p>Por ahora, nuestro arte urbano cruza fronteras. Enviamos a cualquier rincón del planeta para que lleves el estilo de la calle dondequiera que vayas.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Qué métodos de pago aceptan?</h3>
+                        <p>Aceptamos casi todos los métodos de pago: tarjetas de crédito, PayPal, etc. </p>
+                    </div>
+                </section>
+                <!-- Contacto -->
+                <section id="contacto" class="contacto">
+                    <h2>Contacto</h2>
+                    <p>Dirección: Carrera 25A # 1A Sur - 45, Centro Comercial El Tesoro, Medellín, Colombia</p>
+                    <p>Teléfono: 3014561301</p>
+                    <p>Email: streetflight@gmail.com</p>
+                </section>
+            </div>
+        </section>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>StreetFlight</h3>
+                <p>StreetFlight es tu destino final para la moda urbana y la cultura callejera. Descubre las últimas tendencias y expresa tu estilo único.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#destacados">Destacados</a></li>
+                    <li><a href="#destacados">Nuevos Lanzamientos</a></li>
+                    <li><a href="#destacados">Drops</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p><strong>Dirección:</strong> Carrera 25A # 1A Sur - 45, Centro Comercial El Tesoro, Medellín, Colombia</p>
+                <p><strong>Teléfono:</strong> +57 3014591301</p>
+                <p><strong>Email:</strong> streetflight@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>  &copy; 2023 Tienda  StreetFlight. Todos los derechos reservados | streetflight.com | Diseñado por StreetFlight Team</p>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
 
 
         

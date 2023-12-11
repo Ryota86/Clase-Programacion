@@ -1,0 +1,98 @@
+/* Importando Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estableciendo un gradiente de fondo */
+body {
+    background: linear-gradient(135deg, #6997BF 0%, #D93A2B 100%);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.85); /* Semi transparente para permitir ver el gradiente */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    width: 340px;
+}
+
+.login-box h2 {
+    color: #262626; /* Un color oscuro para contraste */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #6997BF;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+    outline: none;
+    border-color: #D93A2B;
+}
+
+.login-box input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #262626; /* Un color oscuro para el botón */
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.login-box input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.login-box .login-remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.login-box .login-remember label {
+    color: #262626;
+    cursor: pointer;
+}
+
+.login-box .login-remember input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.login-box .login-forgot {
+    text-align: right;
+}
+
+.login-box .login-forgot a {
+    color: #6997BF;
+    text-decoration: none;
+}
+
+.login-box .login-forgot a:hover {
+    text-decoration: underline;
+}
+
